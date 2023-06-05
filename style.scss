@@ -6,6 +6,7 @@ $input-focus-background-color :#303134;
 $item-hover-background-color :rgba(232, 234, 237, .08);
 $input-border-color :#5f6368;
 $btn-color : #303134;
+$hyper-links-color : #999da2;
 
 /* add global properties  */
 * {
@@ -28,9 +29,10 @@ button {
   border: 0;
   cursor: pointer;
 }
- body{
+
+body {
   font-family: arial;
- }
+}
 
 main {
   background-color: $main-background-color;
@@ -177,39 +179,46 @@ main {
       align-items: center;
       gap: 8px;
       margin-bottom: 30px;
+
       svg.search-icon {
         width: 20px;
         color: $input-border-color;
         fill: currentColor;
       }
-      form{
+
+      form {
         width: 80%;
-      input{
-        display: block;
-        width: 100%;
-        background-color: transparent;
-        border: none;
-        font-size: 16px;
-        color: $text-color;
+
+        input {
+          display: block;
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          font-size: 16px;
+          color: $text-color;
+        }
       }
-      }
-      .search-tools{
-        svg{
+
+      .search-tools {
+        svg {
           width: 22px;
         }
       }
-      &:focus-within{
+
+      &:focus-within {
         background-color: $input-focus-background-color;
         border: 0;
-        box-shadow: 0 1px 6px  $footer-background-color ;
+        box-shadow: 0 1px 6px $footer-background-color ;
       }
     }
-    .search-btns{
+
+    .search-btns {
       display: flex;
       gap: 20px;
       justify-content: center;
       margin-bottom: 30px;
-      button{
+
+      button {
         padding: 10px 15px;
         background-color: $btn-color;
         color: $text-color;
@@ -217,19 +226,23 @@ main {
         border: 1px solid $btn-color;
         font-size: 15px;
         transition: 0.3s;
-        &:hover{
+
+        &:hover {
           border: 1px solid $input-border-color;
         }
       }
     }
-    .lang-change{
-      p{
+
+    .lang-change {
+      p {
         text-align: center;
         color: $text-color;
         font-size: 12px;
-        a{
+
+        a {
           color: #8ab4f8;
-          &:hover{
+
+          &:hover {
             text-decoration: underline;
           }
         }
@@ -238,46 +251,120 @@ main {
   }
 }
 
-@media (max-width : 1199px){
-  .search-sec{
-    .container{
+@media (max-width : 1199px) {
+  .search-sec {
+    .container {
       width: 60%;
     }
   }
 }
-@media (max-width : 991px){
-  .search-sec{
-    .container{
+
+@media (max-width : 991px) {
+  .search-sec {
+    .container {
       width: 65%;
     }
   }
 }
-@media (max-width : 767px){
-  .search-sec{
-    .container{
+
+@media (max-width : 767px) {
+  .search-sec {
+    .container {
       width: 90%;
-      .brand{
-        img{
+
+      .brand {
+        img {
           transform: scale(0.9);
         }
       }
-      .form-container{
-        form{
+
+      .form-container {
+        form {
           width: 70%;
         }
-        .search-tools{
-          svg{
+
+        .search-tools {
+          svg {
             width: 18px;
           }
         }
       }
-      .search-btns{
-        button{
+
+      .search-btns {
+        button {
           font-size: 12px;
         }
       }
     }
   }
 }
+
 // end search section styling 
 
+// start footer styling 
+.main-footer {
+  background-color: $footer-background-color;
+  height: 94px;
+
+  .country {
+    padding: 15px 2%;
+
+    span {
+      font-size: 15px;
+      color: $hyper-links-color;
+    }
+  }
+
+  hr {
+    border-color: $input-border-color;
+  }
+
+  .footer-hyperlinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 2%;
+
+    ul {
+      display: flex;
+      gap: 20px;
+
+      a {
+        color: $hyper-links-color;
+        font-size: 14px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 767px) {
+  main {
+    height: calc(100vh - 120px);
+  }
+
+  .main-footer {
+    height: 120px;
+    .country{
+      span{
+        display: block;
+        text-align: center;
+      }
+    }
+    .footer-hyperlinks {
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      ul{
+        justify-content: center;
+        a{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// end footer styling 
