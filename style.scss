@@ -1,12 +1,15 @@
 // define variables  
-$main-background-color : #202124;
-$text-color : rgba(255, 255, 255, .87);
-$footer-background-color: #171717;
-$input-focus-background-color :#303134;
-$item-hover-background-color :rgba(232, 234, 237, .08);
-$input-border-color :#5f6368;
-$btn-color : #303134;
-$hyper-links-color : #999da2;
+:root {
+  --main-background-color: #202124;
+  --text-color: rgba(255, 255, 255, .87);
+  --footer-background-color: #171717;
+  --input-focus-background-color: #303134;
+  --item-hover-background-color: rgba(232, 234, 237, .08);
+  --input-border-color: #5f6368;
+  --btn-color: #303134;
+  --hyper-links-color: #999da2;
+
+}
 
 /* add global properties  */
 * {
@@ -35,7 +38,7 @@ body {
 }
 
 main {
-  background-color: $main-background-color;
+  background-color: var(--main-background-color);
   height: calc(100vh - 94px);
 }
 
@@ -63,7 +66,7 @@ main {
           transition: 0.3s all linear;
 
           &:hover {
-            box-shadow: 0 0 2px 5px $item-hover-background-color;
+            box-shadow: 0 0 2px 5px var(--item-hover-background-color);
           }
         }
       }
@@ -80,7 +83,7 @@ main {
             gap: 15px;
 
             a {
-              color: $text-color;
+              color: var(--text-color);
               font-size: 13px;
 
               &:hover {
@@ -116,7 +119,7 @@ main {
 
             // add effect when hovering 
             &:hover {
-              background-color: $item-hover-background-color;
+              background-color: var(--item-hover-background-color);
             }
           }
 
@@ -131,14 +134,14 @@ main {
 
             svg {
               width: 25px;
-              color: $text-color;
+              color: var(--text-color);
               fill: currentColor;
 
             }
 
             // add effect when hovering 
             &:hover {
-              background-color: $item-hover-background-color;
+              background-color: var(--item-hover-background-color);
             }
           }
         }
@@ -171,23 +174,23 @@ main {
 
     .form-container {
       border-radius: 50px;
-      border: 1px solid $input-border-color ;
+      border: 1px solid var(--input-border-color);
       display: flex;
       justify-content: space-between;
       padding: 0px 13px;
       height: 48px;
       align-items: center;
-      gap: 8px;
+      gap: 5px;
       margin-bottom: 30px;
 
       svg.search-icon {
         width: 20px;
-        color: $input-border-color;
+        color: var(--input-border-color);
         fill: currentColor;
       }
 
       form {
-        width: 80%;
+        width: 83%;
 
         input {
           display: block;
@@ -195,7 +198,7 @@ main {
           background-color: transparent;
           border: none;
           font-size: 16px;
-          color: $text-color;
+          color: var(--text-color);
         }
       }
 
@@ -206,9 +209,9 @@ main {
       }
 
       &:focus-within {
-        background-color: $input-focus-background-color;
+        background-color: var(--input-focus-background-color);
         border: 0;
-        box-shadow: 0 1px 6px $footer-background-color ;
+        box-shadow: 0 1px 6px var(--footer-background-color);
       }
     }
 
@@ -220,15 +223,15 @@ main {
 
       button {
         padding: 10px 15px;
-        background-color: $btn-color;
-        color: $text-color;
+        background-color: var(--btn-color);
+        color: var(--text-color);
         border-radius: 3px;
-        border: 1px solid $btn-color;
+        border: 1px solid var(--btn-color);
         font-size: 15px;
         transition: 0.3s;
 
         &:hover {
-          border: 1px solid $input-border-color;
+          border: 1px solid var(--input-border-color);
         }
       }
     }
@@ -236,7 +239,7 @@ main {
     .lang-change {
       p {
         text-align: center;
-        color: $text-color;
+        color: var(--text-color);
         font-size: 12px;
 
         a {
@@ -303,7 +306,7 @@ main {
 
 // start footer styling 
 .main-footer {
-  background-color: $footer-background-color;
+  background-color: var(--footer-background-color);
   height: 94px;
 
   .country {
@@ -311,12 +314,12 @@ main {
 
     span {
       font-size: 15px;
-      color: $hyper-links-color;
+      color: var(--hyper-links-color);
     }
   }
 
   hr {
-    border-color: $input-border-color;
+    border: 0.6px solid var(--input-border-color);
   }
 
   .footer-hyperlinks {
@@ -329,7 +332,7 @@ main {
       gap: 20px;
 
       a {
-        color: $hyper-links-color;
+        color: var(--hyper-links-color);
         font-size: 14px;
 
         &:hover {
@@ -347,19 +350,23 @@ main {
 
   .main-footer {
     height: 120px;
-    .country{
-      span{
+
+    .country {
+      span {
         display: block;
         text-align: center;
       }
     }
+
     .footer-hyperlinks {
       flex-direction: column;
       justify-content: center;
       gap: 5px;
-      ul{
+
+      ul {
         justify-content: center;
-        a{
+
+        a {
           font-size: 12px;
         }
       }
@@ -368,3 +375,13 @@ main {
 }
 
 // end footer styling 
+
+.light {
+  --main-background-color: #fff;
+  --text-color: rgba(0, 0, 0, .7);
+  --btn-color: #f8f9fa;
+  --input-border-color: #cbc5c5;
+  --input-focus-background-color: #fff;
+  --footer-background-color: #f2f2f2;
+  --hyper-links-color: #70757a
+}
