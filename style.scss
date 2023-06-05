@@ -1,0 +1,27 @@
+// define variables  
+$main-background-color : #202124;
+$text-color : #fff;
+$footer-background-color: #171717;
+$input-focus-background-color :#303134;
+$item-hover-background-color :rgba(232, 234, 237, .08);
+
+/* add global properties  */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
