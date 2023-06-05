@@ -17,4 +17,90 @@ a {
 button {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+}
+
+main {
+  background-color: #202124;
+  height: calc(100vh - 94px);
+}
+
+.main-header {
+  padding: 10px 0px 0px;
+}
+.main-header .container {
+  width: 97%;
+  margin: auto;
+}
+.main-header .container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header .container nav .theme-btn-container button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.3s all linear;
+}
+.main-header .container nav .theme-btn-container button:hover {
+  box-shadow: 0 0 2px 5px rgba(232, 234, 237, 0.08);
+}
+.main-header .container nav .options {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.main-header .container nav .options .hyperlinks ul {
+  display: flex;
+  gap: 15px;
+}
+.main-header .container nav .options .hyperlinks ul a {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 13px;
+}
+.main-header .container nav .options .hyperlinks ul a:hover {
+  text-decoration: underline;
+}
+.main-header .container nav .options .dropdown-btns {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.main-header .container nav .options .dropdown-btns .profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all linear;
+}
+.main-header .container nav .options .dropdown-btns .profile-img img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-header .container nav .options .dropdown-btns .profile-img:hover {
+  background-color: rgba(232, 234, 237, 0.08);
+}
+.main-header .container nav .options .dropdown-btns .products-list {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all linear;
+}
+.main-header .container nav .options .dropdown-btns .products-list svg {
+  width: 25px;
+  color: rgba(255, 255, 255, 0.87);
+  fill: currentColor;
+}
+.main-header .container nav .options .dropdown-btns .products-list:hover {
+  background-color: rgba(232, 234, 237, 0.08);
 }

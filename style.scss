@@ -1,6 +1,6 @@
 // define variables  
 $main-background-color : #202124;
-$text-color : #fff;
+$text-color : rgba(255,255,255,.87);
 $footer-background-color: #171717;
 $input-focus-background-color :#303134;
 $item-hover-background-color :rgba(232, 234, 237, .08);
@@ -24,4 +24,107 @@ a {
 button {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
+
+
+main {
+  background-color: $main-background-color;
+  height: calc(100vh - 94px);
+}
+
+// start header css styling 
+.main-header {
+  padding: 10px 0px 0px;
+  .container {
+    width: 97%;
+    margin: auto;
+    // navbar styling 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // theme button styling 
+      .theme-btn-container {
+        button {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: #fff;
+          transition: 0.3s all linear;
+          &:hover{
+            box-shadow: 0 0 2px 5px $item-hover-background-color;
+          }
+        }
+      }
+      // left side in navbar styling 
+      .options {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        .hyperlinks {
+          ul {
+            display: flex;
+            gap: 15px;
+
+            a {
+              color: $text-color;
+              font-size:13px ;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+
+        }
+        // set drop downs btn styling 
+        .dropdown-btns {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          // set profile img styling 
+          .profile-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            transition: 0.3s all linear;
+            img {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            // add effect when hovering 
+            &:hover{
+              background-color: $item-hover-background-color;
+            }
+          }
+          .products-list{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s all linear;
+            svg{
+              width: 25px;
+              color: $text-color;
+              fill: currentColor;
+              
+            }
+            // add effect when hovering 
+            &:hover{
+              background-color: $item-hover-background-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end header css styling 
