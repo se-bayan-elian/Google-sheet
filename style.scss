@@ -1,9 +1,11 @@
 // define variables  
 $main-background-color : #202124;
-$text-color : rgba(255,255,255,.87);
+$text-color : rgba(255, 255, 255, .87);
 $footer-background-color: #171717;
 $input-focus-background-color :#303134;
 $item-hover-background-color :rgba(232, 234, 237, .08);
+$input-border-color :#5f6368;
+$btn-color : #303134;
 
 /* add global properties  */
 * {
@@ -26,7 +28,9 @@ button {
   border: 0;
   cursor: pointer;
 }
-
+ body{
+  font-family: arial;
+ }
 
 main {
   background-color: $main-background-color;
@@ -36,14 +40,17 @@ main {
 // start header css styling 
 .main-header {
   padding: 10px 0px 0px;
+
   .container {
     width: 97%;
     margin: auto;
+
     // navbar styling 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       // theme button styling 
       .theme-btn-container {
         button {
@@ -52,11 +59,13 @@ main {
           border-radius: 50%;
           background-color: #fff;
           transition: 0.3s all linear;
-          &:hover{
+
+          &:hover {
             box-shadow: 0 0 2px 5px $item-hover-background-color;
           }
         }
       }
+
       // left side in navbar styling 
       .options {
         display: flex;
@@ -70,19 +79,22 @@ main {
 
             a {
               color: $text-color;
-              font-size:13px ;
-              &:hover{
+              font-size: 13px;
+
+              &:hover {
                 text-decoration: underline;
               }
             }
           }
 
         }
+
         // set drop downs btn styling 
         .dropdown-btns {
           display: flex;
           gap: 15px;
           align-items: center;
+
           // set profile img styling 
           .profile-img {
             width: 45px;
@@ -90,20 +102,23 @@ main {
             border-radius: 50%;
             display: flex;
             justify-content: center;
-            align-items: center; 
+            align-items: center;
             transition: 0.3s all linear;
+
             img {
               width: 35px;
               height: 35px;
               border-radius: 50%;
               object-fit: cover;
             }
+
             // add effect when hovering 
-            &:hover{
+            &:hover {
               background-color: $item-hover-background-color;
             }
           }
-          .products-list{
+
+          .products-list {
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -111,14 +126,16 @@ main {
             align-items: center;
             justify-content: center;
             transition: 0.3s all linear;
-            svg{
+
+            svg {
               width: 25px;
               color: $text-color;
               fill: currentColor;
-              
+
             }
+
             // add effect when hovering 
-            &:hover{
+            &:hover {
               background-color: $item-hover-background-color;
             }
           }
@@ -127,4 +144,140 @@ main {
     }
   }
 }
+
 // end header css styling 
+
+// start search section styling 
+.search-sec {
+  padding-top: 100px;
+
+  .container {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .brand {
+      margin-bottom: 30px;
+
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .form-container {
+      border-radius: 50px;
+      border: 1px solid $input-border-color ;
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 13px;
+      height: 48px;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 30px;
+      svg.search-icon {
+        width: 20px;
+        color: $input-border-color;
+        fill: currentColor;
+      }
+      form{
+        width: 80%;
+      input{
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        color: $text-color;
+      }
+      }
+      .search-tools{
+        svg{
+          width: 22px;
+        }
+      }
+      &:focus-within{
+        background-color: $input-focus-background-color;
+        border: 0;
+        box-shadow: 0 1px 6px  $footer-background-color ;
+      }
+    }
+    .search-btns{
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+      button{
+        padding: 10px 15px;
+        background-color: $btn-color;
+        color: $text-color;
+        border-radius: 3px;
+        border: 1px solid $btn-color;
+        font-size: 15px;
+        transition: 0.3s;
+        &:hover{
+          border: 1px solid $input-border-color;
+        }
+      }
+    }
+    .lang-change{
+      p{
+        text-align: center;
+        color: $text-color;
+        font-size: 12px;
+        a{
+          color: #8ab4f8;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 1199px){
+  .search-sec{
+    .container{
+      width: 60%;
+    }
+  }
+}
+@media (max-width : 991px){
+  .search-sec{
+    .container{
+      width: 65%;
+    }
+  }
+}
+@media (max-width : 767px){
+  .search-sec{
+    .container{
+      width: 90%;
+      .brand{
+        img{
+          transform: scale(0.9);
+        }
+      }
+      .form-container{
+        form{
+          width: 70%;
+        }
+        .search-tools{
+          svg{
+            width: 18px;
+          }
+        }
+      }
+      .search-btns{
+        button{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+// end search section styling 
+

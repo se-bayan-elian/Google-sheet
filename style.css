@@ -20,6 +20,10 @@ button {
   cursor: pointer;
 }
 
+body {
+  font-family: arial;
+}
+
 main {
   background-color: #202124;
   height: calc(100vh - 94px);
@@ -103,4 +107,114 @@ main {
 }
 .main-header .container nav .options .dropdown-btns .products-list:hover {
   background-color: rgba(232, 234, 237, 0.08);
+}
+
+.search-sec {
+  padding-top: 100px;
+}
+.search-sec .container {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-sec .container .brand {
+  margin-bottom: 30px;
+}
+.search-sec .container .brand img {
+  display: block;
+  margin: auto;
+}
+.search-sec .container .form-container {
+  border-radius: 50px;
+  border: 1px solid #5f6368;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 13px;
+  height: 48px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+.search-sec .container .form-container svg.search-icon {
+  width: 20px;
+  color: #5f6368;
+  fill: currentColor;
+}
+.search-sec .container .form-container form {
+  width: 80%;
+}
+.search-sec .container .form-container form input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.87);
+}
+.search-sec .container .form-container .search-tools svg {
+  width: 22px;
+}
+.search-sec .container .form-container:focus-within {
+  background-color: #303134;
+  border: 0;
+  box-shadow: 0 1px 6px #171717;
+}
+.search-sec .container .search-btns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.search-sec .container .search-btns button {
+  padding: 10px 15px;
+  background-color: #303134;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 3px;
+  border: 1px solid #303134;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.search-sec .container .search-btns button:hover {
+  border: 1px solid #5f6368;
+}
+.search-sec .container .lang-change p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 12px;
+}
+.search-sec .container .lang-change p a {
+  color: #8ab4f8;
+}
+.search-sec .container .lang-change p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+  .search-sec .container {
+    width: 60%;
+  }
+}
+@media (max-width: 991px) {
+  .search-sec .container {
+    width: 65%;
+  }
+}
+@media (max-width: 767px) {
+  .search-sec .container {
+    width: 90%;
+  }
+  .search-sec .container .brand img {
+    transform: scale(0.9);
+  }
+  .search-sec .container .form-container form {
+    width: 70%;
+  }
+  .search-sec .container .form-container .search-tools svg {
+    width: 18px;
+  }
+  .search-sec .container .search-btns button {
+    font-size: 12px;
+  }
 }
